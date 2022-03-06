@@ -18,35 +18,25 @@ window.onload = () => {
     };
 
     const movePlayer = (dice) => {
-        let holder = currentPlayer.position
+        let holder = currentPlayer.position;
+        document.querySelector(`#p${holder}`).innerHTML = "";
         let newPosition = holder += dice;
+        currentPlayer.position = newPosition;
+
+        if (currentPlayer.position >= 100) {
+            alert(`${currentPlayer.name} is the winner!`);
+            location.reload();
+        }
+      
         
-      const myInterval =  setInterval(function() {
-            document.querySelector(`#p${currentPlayer.position}`).innerHTML = "";
-        currentPlayer.position++;
-        console.log(currentPlayer.position);
-        console.log(newPosition);
-        
+    
         if (currentPlayer == player1) {
-            document.querySelector(`#p${currentPlayer.position}`).innerHTML = currentPlayer.name;
+            document.querySelector(`#p${newPosition}`).innerHTML = currentPlayer.name;
         } else if (currentPlayer == player2) {
-            document.querySelector(`#p${currentPlayer.position}`).innerHTML = currentPlayer.name;
+            document.querySelector(`#p${newPosition}`).innerHTML = currentPlayer.name;
         }
        
-        if (currentPlayer.position == newPosition) {
-            clearInterval(myInterval);
-        }
-            
-        
-        
-        }
-        
-        , 300);
-
-        
-        
-
-        
+       
     };
 
 
