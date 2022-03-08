@@ -1,6 +1,6 @@
 # snake-and-ladder
  This is the repository for the snake & ladder project for minor visual design & front-end development
- Live demo: (comming soon)
+ Live demo: https://aref-akminasi.github.io/snake_and_ladder/
 
  ## How to run
 ```
