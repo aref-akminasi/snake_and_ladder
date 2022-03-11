@@ -9,7 +9,7 @@
 //Run it with the live server or localy through the browser
 ```
 ## Background
-I had the choice to work on a project to develop a program related to the minor Visual Design & Front-End Development at The Hague University of Applied Sciences. The idea behind this project was that I wanted to build an application that would help me learn more Object oriented programming in JavaScript while building it. I worked on this project on my own ☕
+I had the choice to work on a project to develop a program related to the minor Visual Design & Front-End Development at The Hague University of Applied Sciences. The idea behind this project was that I wanted to build an application that would help me learn more Object oriented programming in JavaScript while building it. I worked on this project on my own. ☕
 
 ## Thanks
 
