@@ -1,8 +1,8 @@
 window.onload = () => {
     
-    
+    //These two objects are the players, they has two properties, name and current position
     const player1 = {
-        name: prompt("Please enter your name", "Player1"),
+        name: prompt("Please enter your name", "Player1"), //When the screen loads, the playes will be asked to give their names
         position: 1
 
     };
@@ -13,8 +13,9 @@ window.onload = () => {
 
     };
 
+    //This is the roll dice function, it returns a number between 2 and 12
     const rollDice = () => {
-        return Math.floor(Math.random() * 11) + 2;
+        return Math.floor(Math.random() * 11) + 2; 
     };
 
     const movePlayer = (dice) => {
@@ -30,7 +31,7 @@ window.onload = () => {
         }
       
         
-    
+        
         if (currentPlayer == player1) {
             document.querySelector(`#p${newPosition}`).innerHTML = currentPlayer.name;
         } else if (currentPlayer == player2) {
@@ -40,6 +41,7 @@ window.onload = () => {
        risk(newPosition);
     };
 
+    //This function is called after the player has moved. It tells if the player has landed on a snake head or at the bottom of a ladder
     const risk = (newPosition) => {
         switch (newPosition) {
             case 4:
@@ -119,6 +121,7 @@ window.onload = () => {
         }
     };
 
+    //This function updates the position property of the player
     const moveToPosition = (newPosition) => {
         currentPlayer.position = newPosition;
         if (currentPlayer == player1) {
@@ -129,6 +132,7 @@ window.onload = () => {
     };
 
 
+    //This function updates the player turn, it also changes the innerHTML which represents the current player who has to play
     const updateTurn = () => {
         if( document.querySelector('#name').innerHTML == player1.name){ 
             document.querySelector('#name').innerHTML = player2.name;
